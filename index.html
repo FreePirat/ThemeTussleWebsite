@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Pirat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="top-bar">
+            <a href="#overview">Overview</a>
+            <a href="#mainCharacter">Main Character</a>
+            <a href="#opponents">Opponents</a>
+            <a href="#stages">Stages</a>
+            <a href="#controls">Controls</a>
+        </div>
+    </div>
+    
+    <div class="body-no-bar">
+        <div class="accordion">
+
+            <h3 id="overview">Overview</h3>
+            <div class="description-with-video">
+                <p class="description">
+                    Theme Tussle is a 2D fighting game made for true fighting game enthusiasts.
+                    All characters in the game are stylized around movie themes.
+                    The player controls a character they select and heads out to battle against other characters.
+                    The matches will be put under a timer, and the idea is to lower your opponent's health bar to 0 to achieve victory.
+                    If your health bar were to reach 0, you would lose. 
+                    Different characters will be available for the player. 
+                    This allows the player to maybe find a character that suits them.
+                </p>
+
+                <video controls>
+                    <source src="Theme_Tussle_Trailer.mp4" type="video/mp4">
+                    Your browser does not support mp4 files.
+                </video>
+            </div>
+
+            <h3 id="mainCharacter">Main Character</h3>
+            <div class="description-lines">
+                <p class="description">
+                    The main character is a girl from the West called Nina.
+                    She’s a bounty hunter with a love for money and adventures.
+                    She won’t hesitate to say what’s on her mind. 
+                    Her playstyle is an in-your-face character with many weapons, such as a rope and her trusty pistol.
+                    Her goal in this game is to catch her bounty, Charlie. 
+                    Her playstyle will be very beginner friendly to act as a good first character to try out.
+                </p>
+                <div class="image-container">
+                    <div class="image-with-text">
+                        <img src="images/NWin.png" alt="Nina Win" />
+                        <img src="images/NLose.png" alt="Nina Lose" />
+                        <div class="img-text">Nina</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="opponents">Opponents</h3>
+            <div class="description-lines">
+                <p class="description">
+                    Suzie is a thief who dreams of robbing someone of high authority, claiming their riches as her own.
+                    She is a quick and stealthy character who attacks with a dagger and ninja stars.
+                    Her health bar is much smaller than that of other characters, but don’t let that fool you her speed makes up for it.
+
+                    Leo, King of Spiders, is a huge man who commands spiders to attack his opponents. 
+                    He wants to get rid of anyone who opposes him. His size makes him easier to hit, but his bigger health bar and ability to throw out loyal spiders makes him a scary opponent.
+                    
+                    Charlie is a rogue jester who dislikes responsibilities and wants to spread smiles and laughs worldwide.
+                    Unfortunately, her methods are poorly thought out, as they hurt people more than help. 
+                    Their playstyle is unpredictable as they can throw an assortment of random objects that all fulfill different tasks.
+                </p>
+                <div class="image-container">
+
+                    <div class="image-with-text">
+                        <img src="images/Suzie.png" alt="Suzie" />
+                        <div class="img-text">Suzie</div>
+                    </div>
+
+                    <div class="image-with-text">
+                        <img src="images/Leo.png" alt="Leo" />
+                        <div class="img-text">Leo</div>
+                    </div>
+
+                    <div class="image-with-text">
+                        <img src="images/Charlie.png" alt="Charlie" />
+                        <div class="img-text">Charlie</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <h3 id="stages">Stages</h3>
+            <div class="description-lines">
+                <div class="stage-container">
+                    <img src="images/danger.png" alt="dangerous zone">
+                    <img src="images/Western.png" alt="A Western Area">
+                    <img src="images/Kingdom.png" alt="A Kingdom">
+                </div>
+            </div>
+
+            <h3 id="controls">Controls</h3>
+            <div class="description-lines">
+                <img class="control-img" src="images/TutorialStage.png" alt="Controls">
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        //Making Accordion Items
+        const accordionItems = document.querySelectorAll('.accordion h3');
+
+        accordionItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const description = this.nextElementSibling;
+                description.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+        });
+
+        //Type in Letter by Letter
+        const descriptions = document.querySelectorAll('.description');
+
+        descriptions.forEach(description => {
+            const letters = description.textContent.split('');
+            description.textContent = '';
+
+            letters.forEach((letter, index) => {
+                const span = document.createElement('span');
+                span.textContent = letter;
+                span.style.animationDelay = `${index * 10}ms`;
+                description.appendChild(span);
+            });
+        });
+    </script>
+</body>
+</html>
