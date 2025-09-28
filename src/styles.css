@@ -1,9 +1,11 @@
 body {
-    background: #1a1a1a;
-    color: #fff;
-    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(180deg, #7b1818 0%, #3a0707 100%);
+    color: #f5e6c5;
+    font-family: 'Cinzel', 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    position: relative;
 }
 
 .top-bar a {
@@ -155,26 +157,35 @@ video{
 }
 
 .cinema-header {
-    background: linear-gradient(90deg, #b71c1c 0%, #880e4f 100%);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
-    padding: 0.5em 0;
+    background: repeating-linear-gradient(135deg, #b71c1c 0 20px, #a31515 20px 40px);
+    border-bottom: 6px solid #c9a74a;
+    box-shadow: 0 4px 16px #2d0505, 0 1px 0 #c9a74a inset;
+    padding: 1.2em 0 0.7em 0;
+    position: relative;
+    z-index: 1000;
 }
 
 .cinema-header nav {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    /* Remove max-width, margin, and padding to allow full width */
+    justify-content: center;
+    /* Center the header content */
 }
 
 .logo {
     font-family: 'Cinzel', serif;
-    font-size: 2em;
-    color: gold;
-    text-shadow: 0 0 10px #fff200, 0 0 20px #b71c1c;
+    font-size: 2.3em;
+    color: #c9a74a;
+    text-shadow: 0 1px 0 #fffbe6, 0 0 4px #b71c1c;
     text-decoration: none;
-    letter-spacing: 2px;
-    margin-right: 3em; /* Add spacing between logo and nav links */
+    letter-spacing: 3px;
+    margin-right: 3em;
+    padding: 0.2em 1.2em;
+    border: 3px double #c9a74a;
+    border-radius: 18px;
+    background: #2d0505;
+    box-shadow: 0 0 8px #c9a74a inset;
+    display: inline-block;
 }
 
 nav ul {
@@ -203,17 +214,22 @@ nav ul li a:hover {
 
 main {
     max-width: 900px;
-    margin: 2em auto;
-    padding: 2em;
-    background: rgba(30, 30, 30, 0.95);
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+    margin: 3em auto 2em auto;
+    padding: 2.5em 2em 2em 2em;
+    background: rgba(30, 10, 10, 0.97);
+    border-radius: 0 0 48px 48px / 0 0 32px 32px;
+    box-shadow: 0 8px 32px #2d0505, 0 0 0 8px #b71c1c inset, 0 0 0 12px #c9a74a inset;
+    border-top: 0.5em solid #c9a74a;
+    border-bottom: 1em solid #7b1818;
+    position: relative;
 }
 
 h1, h2 {
     font-family: 'Cinzel', serif;
-    color: gold;
-    text-shadow: 0 0 8px #fff200;
+    color: #c9a74a;
+    text-shadow: 0 1px 0 #fffbe6, 0 0 2px #b71c1c;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
 }
 
 .overview ul.rules {
@@ -273,10 +289,45 @@ h1, h2 {
 
 footer {
     text-align: center;
-    padding: 1em 0;
-    background: #111;
-    color: #aaa;
-    font-size: 0.95em;
+    padding: 1.2em 0 1em 0;
+    background: linear-gradient(90deg, #3a0707 0%, #7b1818 100%);
+    color: #f5e6c5;
+    font-size: 1em;
     margin-top: 2em;
-    border-top: 2px solid #b71c1c;
+    border-top: 4px solid #c9a74a;
+    box-shadow: 0 -2px 12px #2d0505;
+}
+
+/* Theatre curtain side effect */
+body::before, body::after {
+    content: '';
+    position: fixed;
+    top: 0; bottom: 0;
+    width: 90px;
+    background: repeating-linear-gradient(120deg, #b71c1c 0 30px, #7b1818 30px 60px);
+    z-index: 0;
+    border-left: 4px solid #c9a74a;
+    border-right: 4px solid #c9a74a;
+    box-shadow: 0 0 16px #2d0505 inset;
+}
+body::before { left: 0; }
+body::after { right: 0; }
+
+main, .cinema-header, footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Subtle spotlight effect */
+main::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -80px;
+    width: 400px;
+    height: 180px;
+    background: radial-gradient(ellipse at center, rgba(255,245,200,0.10) 0%, rgba(255,245,200,0) 80%);
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 0;
 }
