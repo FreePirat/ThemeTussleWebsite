@@ -66,18 +66,19 @@
 .character-main-row {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 4.5rem;
   width: 100%;
 }
 
 .character-portrait {
+  position: relative;
   width: 340px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin: 0 1.5rem;
 }
 
 .character-portrait img {
@@ -88,7 +89,7 @@
   border-radius: 24px;
   border: 5px solid gold;
   box-shadow: 0 8px 32px #b71c1c, 0 0 0 8px #1a0606 inset;
-  background: #2a0000;
+  background: repeating-linear-gradient(45deg, #520d0d 0 24px, #911818 24px 48px);
 }
 
 
@@ -102,6 +103,7 @@
   margin: 0 auto 0 auto;
   display: block;
   gap: 1.2rem;
+  min-width: 320px;
 }
 
 .character-header {
@@ -177,7 +179,59 @@
   color: #f5f5f5;
   font-size: 1em;
 }
-
+.character-nav-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.arrow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-size: 2.2rem;
+  color: gold;
+  background: rgba(30,0,0,0.7);
+  border: 2px solid gold;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 10px #b71c1c44;
+  margin: 0 1.5rem;
+}
+.arrow-btn:hover {
+  background: gold;
+  color: #b71c1c;
+  box-shadow: 0 4px 18px #ff4444aa;
+}
+.left-arrow {
+  margin-right: 1rem;
+}
+.right-arrow {
+  margin-left: 1rem;
+}
+.character-playstyle-tag {
+  position: absolute;
+  bottom: 0px;
+  z-index: 2;
+  display: inline-block;
+  background: rgba(104, 88, 0, 0.85);
+  color: rgb(255, 255, 255);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 2px solid gold;
+  border-radius: 999px;
+  padding: 0.25em 1em;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px #b71c1c99, 0 0 2px #000a;
+  vertical-align: middle;
+  white-space: nowrap;
+  pointer-events: none;
+}
 @media (max-width: 900px) {
   .character-page {
     flex-direction: column;
@@ -190,25 +244,18 @@
     gap: 1.5rem;
     width: 100%;
   }
-  .character-portrait {
-    width: 100%;
-    max-width: 340px;
-    margin-bottom: 1.2rem;
-  }
-  .character-portrait img {
-    width: 90vw;
-    max-width: 340px;
-    height: auto;
-    aspect-ratio: 3/4;
-  }
-  .character-info {
-    width: 100%;
+  .character-portrait, .character-info {
     min-width: 0;
-    padding: 1.2rem 1rem 1.5rem 1rem;
-    max-width: 100%;
-    margin-bottom: 2rem;
+    margin: 0;
   }
-  .character-movelist-bottom {
-    max-width: 100%;
+  .arrow-btn {
+    margin: 0.5rem 0;
+  }
+  .character-playstyle-tag {
+    font-size: 0.98rem;
+    padding: 0.25em 0.8em;
+    bottom: 10px;
+    left: 2px;
+    top: auto;
   }
 }
