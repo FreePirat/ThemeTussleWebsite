@@ -1,0 +1,214 @@
+.character-movelist-bottom {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 0 auto;
+  display: block;
+}
+.character-movelist-bottom h2 {
+  font-family: 'Cinzel', serif;
+  color: #ff4444;
+  font-size: 1.4rem;
+  margin-bottom: 0.4em;
+  letter-spacing: 1px;
+  border-left: 4px solid gold;
+  padding-left: 0.5em;
+  text-shadow: 0 1px 8px #b71c1c44;
+}
+.character-movelist-bottom .movelist {
+  width: 100%;
+  max-width: 600px;
+  margin-left: 0;
+}
+@media (max-width: 900px) {
+  .character-page {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .character-main-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  .character-portrait {
+    width: 100%;
+    max-width: 340px;
+    margin-bottom: 1.2rem;
+  }
+  .character-portrait img {
+    width: 90vw;
+    max-width: 340px;
+    height: auto;
+    aspect-ratio: 3/4;
+  }
+  .character-info {
+    width: 100%;
+    min-width: 0;
+    padding: 1.2rem 1rem 1.5rem 1rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .character-movelist-bottom {
+    max-width: 100%;
+  }
+}
+.character-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem auto 2rem auto;
+  max-width: 950px;
+  width: 100%;
+}
+
+
+.character-main-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.character-portrait {
+  width: 340px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.character-portrait img {
+  width: 320px;
+  height: 440px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 24px;
+  border: 5px solid gold;
+  box-shadow: 0 8px 32px #b71c1c, 0 0 0 8px #1a0606 inset;
+  background: #2a0000;
+}
+
+
+.character-info {
+  flex: 1 1 0;
+  border-radius: 20px;
+  border: 3px solid gold;
+  box-shadow: 0 4px 24px #b71c1c44;
+  padding: 2.2rem 2rem 2rem 2rem;
+  max-width: 600px;
+  margin: 0 auto 0 auto;
+  display: block;
+  gap: 1.2rem;
+}
+
+.character-header {
+  margin-bottom: 0.5rem;
+}
+.character-name {
+  font-family: 'Cinzel', serif;
+  font-size: 2.7rem;
+  color: gold;
+  letter-spacing: 2px;
+  margin-bottom: 0.1em;
+  text-shadow: 0 2px 12px #b71c1c99, 0 0 2px #fff8;
+}
+.character-tagline {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #ffb347;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+  text-shadow: 0 1px 6px #b71c1c88;
+}
+.character-flavor {
+  font-style: italic;
+  color: #ffb347;
+  font-size: 1.1rem;
+  margin-bottom: 1.2em;
+  text-shadow: 0 1px 6px #b71c1c44;
+}
+.character-info h2 {
+  font-family: 'Cinzel', serif;
+  color: #ff4444;
+  font-size: 1.4rem;
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+  letter-spacing: 1px;
+  border-left: 4px solid gold;
+  padding-left: 0.5em;
+  text-shadow: 0 1px 8px #b71c1c44;
+}
+.character-info p {
+  color: #f5f5f5;
+  font-size: 1.08rem;
+  margin-bottom: 0.7em;
+}
+.movelist {
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0 0 0;
+  gap: 0.7em;
+}
+.movelist li {
+  background: rgba(255,255,255,0.04);
+  border-left: 4px solid #ffb347;
+  border-radius: 8px;
+  padding: 0.7em 1em 0.7em 1.2em;
+  font-size: 1.08em;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.7em;
+  box-shadow: 0 1px 6px #b71c1c22;
+}
+.move-name {
+  font-family: 'Cinzel', serif;
+  color: gold;
+  font-weight: 700;
+  font-size: 1.08em;
+  margin-right: 0.5em;
+}
+.move-desc {
+  color: #f5f5f5;
+  font-size: 1em;
+}
+
+@media (max-width: 900px) {
+  .character-page {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .character-main-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  .character-portrait {
+    width: 100%;
+    max-width: 340px;
+    margin-bottom: 1.2rem;
+  }
+  .character-portrait img {
+    width: 90vw;
+    max-width: 340px;
+    height: auto;
+    aspect-ratio: 3/4;
+  }
+  .character-info {
+    width: 100%;
+    min-width: 0;
+    padding: 1.2rem 1rem 1.5rem 1rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .character-movelist-bottom {
+    max-width: 100%;
+  }
+}
