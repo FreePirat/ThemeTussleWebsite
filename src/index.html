@@ -9,13 +9,20 @@
 </head>
 <body>
     <header class="cinema-header">
+    <div class="navbar">
+        <a href="#" class="logo">🎬 Theme Tussle</a>
         <nav>
-            <a href="index.html" class="logo">🎬 Theme Tussle</a>
+        <ul>
+            <li><a href="#controls">Controls</a></li>
+            <li><a href="#characters">Characters</a></li>
+            <li><a href="#stages">Stages</a></li>
+        </ul>
         </nav>
+    </div>
     </header>
     <main>
         <section class="overview">
-            <h1>Welcome to Theme Tussle</h1>
+            <h1>Let's Set The Stage</h1>
             <p>
                 <strong>Theme Tussle</strong> is a 2D fighting game where every character is inspired by classic movie genres. 
                 Choose your fighter, master their moves, and battle your way to victory!
@@ -33,13 +40,40 @@
                 Your browser does not support the video tag.
             </video>
         </section>
-        <section class="controls">
+        <section class="controls" id="controls">
             <h2>Controls</h2>
-            Control details will be added soon!
+            <img src="../public/images/Controls.png" alt="Control Layout" id="controls-image">
         </section>
+        <section class="characters" id="characters">
+            <h2>Characters</h2>
+            <div class="character-grid">
+                <a class="character-card" href="pages/charlie.html">
+                    <img src="../public/images/Charlie.png" alt="Charlie">
+                    <span>Charlie</span>
+                </a>
+                <a class="character-card" href="pages/leo.html">
+                    <img src="../public/images/Leo.png" alt="Leo">
+                    <span>Leo</span>
+                </a>
+                <a class="character-card" href="pages/nina.html">
+                    <img src="../public/images/NWin.png" alt="Nina">
+                    <span>Nina</span>
+                </a>
+                <a class="character-card" href="pages/suzie.html">
+                    <img src="../public/images/Suzie.png" alt="Suzie">
+                    <span>Suzie</span>
+                </a>
+            </div>
+        </section>
+        <section class="stages" id="stages">
+            <h2>Stages</h2>
+            W.I.P.
+        </section>
+
     </main>
     <footer>
         <p>&copy; 2025 Theme Tussle. All rights reserved.</p>
     </footer>
 </body>
 </html>
+
