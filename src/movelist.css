@@ -1,0 +1,218 @@
+/* Fighting Game Movelist Styles */
+.movelist-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  max-width: none;
+  width: 100%;
+}
+
+.move-entry {
+  background: linear-gradient(135deg, #2a0606 0%, #1a0404 100%);
+  border: 2px solid #b71c1c;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(183, 28, 28, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: none;
+}
+
+.move-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(183, 28, 28, 0.4);
+}
+
+.move-header {
+  background: linear-gradient(90deg, #b71c1c 0%, #8b1538 100%);
+  padding: 1.5rem 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gold;
+}
+
+.move-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  color: gold;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.move-input {
+  font-family: 'Roboto', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  padding: 0.3em 0.8em;
+  border-radius: 6px;
+  border: 1px solid gold;
+  letter-spacing: 0.5px;
+}
+
+.move-content {
+  padding: 3rem 7rem;
+  display: flex;
+  gap: 6rem;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 180px;
+}
+
+.move-image {
+  flex-shrink: 0;
+  width: 380px;
+  height: 220px;
+  background: rgba(0,0,0,0.5);
+  border: 2px solid #444;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.move-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.move-data {
+  flex: 1;
+  min-width: 0;
+}
+
+.move-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(183, 28, 28, 0.3);
+}
+
+.stat {
+  font-size: 0.95rem;
+  color: #f0f0f0;
+  background: rgba(183, 28, 28, 0.2);
+  padding: 0.3em 0.7em;
+  border-radius: 6px;
+  border: 1px solid rgba(183, 28, 28, 0.4);
+  white-space: nowrap;
+}
+
+.stat strong {
+  color: gold;
+}
+
+.move-description {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.move-properties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.property {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25em 0.6em;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid;
+}
+
+.property.projectile {
+  background: rgba(74, 144, 226, 0.2);
+  color: #4a90e2;
+  border-color: #4a90e2;
+}
+
+.property.special-cancel {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+  border-color: #ffc107;
+}
+
+.property.command-grab {
+  background: rgba(156, 39, 176, 0.2);
+  color: #9c27b0;
+  border-color: #9c27b0;
+}
+
+.property.combo-starter {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border-color: #4caf50;
+}
+
+.property.overhead {
+  background: rgba(255, 87, 34, 0.2);
+  color: #ff5722;
+  border-color: #ff5722;
+}
+
+.property.hard-knockdown {
+  background: rgba(121, 85, 72, 0.2);
+  color: #795548;
+  border-color: #795548;
+}
+
+.property.guard-break {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border-color: #f44336;
+}
+
+.property.super {
+  background: rgba(255, 215, 0, 0.2);
+  color: gold;
+  border-color: gold;
+}
+
+.property.invincible {
+  background: rgba(233, 30, 99, 0.2);
+  color: #e91e63;
+  border-color: #e91e63;
+}
+
+.property.cinematic {
+  background: rgba(103, 58, 183, 0.2);
+  color: #673ab7;
+  border-color: #673ab7;
+}
+
+@media (max-width: 768px) {
+  .move-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .move-image {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  .move-stats {
+    justify-content: center;
+  }
+  
+  .move-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}

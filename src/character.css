@@ -1,6 +1,6 @@
 .character-movelist-bottom {
   width: 100%;
-  max-width: 600px;
+  max-width: none;
   margin: 0 auto 0 auto;
   display: block;
 }
@@ -58,7 +58,7 @@
   flex-direction: column;
   align-items: center;
   margin: 3rem auto 2rem auto;
-  max-width: 950px;
+  max-width: 1400px;
   width: 100%;
 }
 
