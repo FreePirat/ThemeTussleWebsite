@@ -6,7 +6,7 @@
     <title>Theme Tussle</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Roboto:400&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/public/images/favicon.png" />
+    <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
     <header class="cinema-header">
@@ -68,10 +68,143 @@
         </section>
         <section class="stages" id="stages">
             <h2>Stages</h2>
-            <img src="../public/images/Western.png" alt="Western Stage" class="stages-image">
-            <img src="../public/images/danger.png" alt="Danger Stage" class="stages-image">
-            <img src="../public/images/Kingdom.png" alt="Kingdom Stage" class="stages-image">
+            <div class="stages-container">
+                <img src="../public/images/Western.png" alt="Western Stage" class="stages-image">
+                <img src="../public/images/danger.png" alt="Danger Stage" class="stages-image">
+                <img src="../public/images/Kingdom.png" alt="Kingdom Stage" class="stages-image">
+            </div>
         </section>
+
+        <!-- Other Websites Section -->
+            <section id="other-websites">
+
+            <div class="wrap reveal">
+                <h1>Other Websites</h1>
+                <h3 class="kicker">Additional web projects and applications I've built.</h3>
+                <div class="websites-container">
+                <button class="website-nav-btn website-nav-prev" id="prevWebsite" aria-label="Previous website">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="website-nav-btn website-nav-next" id="nextWebsite" aria-label="Next website">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="websites-scroll" id="websitesScroll">
+                    <!-- Website Card Template -->
+
+                    <article class="website-card" onclick="window.open('https://freepirat.github.io/jakesoucy.github.io/', '_blank')">
+                    <div class="website-image">
+                        <img src="../public/images/Portfolio.png" alt="Portfolio" loading="lazy">
+                    </div>
+                    <div class="website-content">
+                        <h3>My Portfolio</h3>
+                        <p>A showcase of my work and projects.</p>
+                        <div class="website-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        </div>
+                    </div>
+                    </article>
+
+                    <article class="website-card" onclick="window.open('https://freepirat.github.io/Tiermaker2/', '_blank')">
+                    <div class="website-image">
+                        <img src="../public/images/TierMaker.png" alt="TierMaker2" loading="lazy">
+                    </div>
+                    <div class="website-content">
+                        <h3>Theme Tussle</h3>
+                        <p>Theme Tussle is a 2D fighting game where every character is inspired by classic movie genres. Choose your fighter, master their moves, and battle your way to victory!</p>
+                        <div class="website-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        </div>
+                    </div>
+                    </article>
+
+                    <article class="website-card" onclick="window.open('https://freepirat.github.io/FunWithGambling/', '_blank')">
+                    <div class="website-image">
+                        <img src="../public/images/FunWithGambling.png" alt="Fun With Gambling" loading="lazy">
+                    </div>
+                    <div class="website-content">
+                        <h3>Fun With Gambling</h3>
+                        <p>Fun With Gambling is an interactive web application that allows users to explore various gambling games and their mechanics.</p>
+                        <div class="website-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        </div>
+                    </div>
+                    </article>
+                    
+                </div>
+                </div>
+            </div>
+            </section>
+
+            <script>
+                            // Website navigation functionality
+            const websitesScroll = document.getElementById('websitesScroll');
+            const prevBtn = document.getElementById('prevWebsite');
+            const nextBtn = document.getElementById('nextWebsite');
+
+            if (websitesScroll && prevBtn && nextBtn) {
+            let currentIndex = 0;
+            const websiteCards = websitesScroll.querySelectorAll('.website-card');
+            const totalCards = websiteCards.length;
+            
+            function updateButtonStates() {
+                prevBtn.disabled = currentIndex === 0;
+                nextBtn.disabled = currentIndex >= totalCards - 1;
+            }
+            
+            function scrollToWebsite(index) {
+                if (index >= 0 && index < totalCards) {
+                const card = websiteCards[index];
+                const scrollLeft = card.offsetLeft - (websitesScroll.offsetWidth - card.offsetWidth) / 2;
+                websitesScroll.scrollTo({
+                    left: scrollLeft,
+                    behavior: 'smooth'
+                });
+                currentIndex = index;
+                updateButtonStates();
+                
+                // Optional: Track navigation for analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'website_navigation', {
+                    'direction': index > currentIndex ? 'next' : 'prev',
+                    'website_index': index
+                    });
+                }
+                }
+            }
+            
+            prevBtn.addEventListener('click', () => {
+                scrollToWebsite(currentIndex - 1);
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                scrollToWebsite(currentIndex + 1);
+            });
+            
+            // Update button states on manual scroll
+            websitesScroll.addEventListener('scroll', () => {
+                const scrollLeft = websitesScroll.scrollLeft;
+                const cardWidth = websiteCards[0].offsetWidth + 32; // card width + gap
+                const newIndex = Math.round(scrollLeft / cardWidth);
+                if (newIndex !== currentIndex && newIndex >= 0 && newIndex < totalCards) {
+                currentIndex = newIndex;
+                updateButtonStates();
+                }
+            });
+            
+            // Initialize button states
+            updateButtonStates();
+            }
+            </script>
 
     </main>
     <footer>
