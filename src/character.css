@@ -19,40 +19,7 @@
   max-width: 600px;
   margin-left: 0;
 }
-@media (max-width: 900px) {
-  .character-page {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  .character-main-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    width: 100%;
-  }
-  .character-portrait {
-    width: 100%;
-    max-width: 340px;
-    margin-bottom: 1.2rem;
-  }
-  .character-portrait img {
-    width: 90vw;
-    max-width: 340px;
-    height: auto;
-    aspect-ratio: 3/4;
-  }
-  .character-info {
-    width: 100%;
-    min-width: 0;
-    padding: 1.2rem 1rem 1.5rem 1rem;
-    max-width: 100%;
-    margin-bottom: 2rem;
-  }
-  .character-movelist-bottom {
-    max-width: 100%;
-  }
-}
+
 .character-page {
   display: flex;
   flex-direction: column;
@@ -61,7 +28,6 @@
   max-width: 1400px;
   width: 100%;
 }
-
 
 .character-main-row {
   display: flex;
@@ -91,7 +57,6 @@
   box-shadow: 0 8px 32px #b71c1c, 0 0 0 8px #1a0606 inset;
   background: repeating-linear-gradient(45deg, #520d0d 0 24px, #911818 24px 48px);
 }
-
 
 .character-info {
   flex: 1 1 0;
@@ -186,6 +151,26 @@
   gap: 2.5rem;
   margin-bottom: 1.5rem;
 }
+
+.character-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.character-navigation-mobile {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+}
+
 .arrow-btn {
   display: flex;
   align-items: center;
@@ -232,6 +217,7 @@
   white-space: nowrap;
   pointer-events: none;
 }
+
 @media (max-width: 900px) {
   .character-page {
     flex-direction: column;
@@ -244,12 +230,46 @@
     gap: 1.5rem;
     width: 100%;
   }
-  .character-portrait, .character-info {
-    min-width: 0;
-    margin: 0;
+  
+  /* Hide desktop arrows on mobile */
+  .character-main-row > .arrow-btn {
+    display: none;
   }
-  .arrow-btn {
-    margin: 0.5rem 0;
+  
+  /* Show mobile arrows above description */
+  .character-navigation-mobile {
+    display: flex;
+  }
+  
+  .character-portrait {
+    width: 100%;
+    max-width: 340px;
+    margin-bottom: 1.2rem;
+  }
+  .character-portrait img {
+    width: 90vw;
+    max-width: 340px;
+    height: auto;
+    aspect-ratio: 3/4;
+  }
+  .character-info {
+    width: 100%;
+    min-width: 0;
+    padding: 1.2rem 1rem 1.5rem 1rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .character-movelist-bottom {
+    max-width: 100%;
+  }
+  .character-navigation {
+    display: none;
+  }
+  .character-navigation-mobile .arrow-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 2rem;
+    margin: 0;
   }
   .character-playstyle-tag {
     font-size: 0.98rem;

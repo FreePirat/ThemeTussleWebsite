@@ -488,41 +488,289 @@ footer {
   color: var(--bg);
 }
 
-/* Responsive Design */
+/* Responsive Design - Mobile First */
 @media (max-width: 768px) {
+  /* Mobile test - red background to verify mobile styles are working */
+  body {
+    background: #0a0a0a !important;
+  }
+  
+  body::before {
+    content: "MOBILE VIEW ACTIVE";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: red;
+    color: white;
+    padding: 5px;
+    z-index: 9999;
+    font-size: 12px;
+  }
+  
+  /* Force mobile layout */
+  * {
+    box-sizing: border-box !important;
+  }
+  
+  /* Mobile Header */
+  .cinema-header {
+    padding: 0.8rem 0.5rem !important;
+  }
+  
+  .cinema-header .navbar {
+    flex-direction: column !important;
+    gap: 0.8rem !important;
+  }
+  
+  .cinema-header .logo {
+    font-size: 1.2rem !important;
+    text-align: center !important;
+  }
+  
+  .cinema-header nav ul {
+    gap: 0.6rem !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .cinema-header nav ul li a {
+    font-size: 0.9rem !important;
+    padding: 0.3rem 0.6rem !important;
+  }
+  
+  /* Mobile Main Content */
+  main {
+    padding: 0.8rem 0.5rem !important;
+    max-width: 100vw !important;
+  }
+  
+  /* Mobile Overview */
+  .overview h1 {
+    font-size: 1.8rem !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .overview p {
+    font-size: 0.95rem !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.4 !important;
+    max-width: 100% !important;
+  }
+  
+  .rules {
+    margin-top: 1rem !important;
+    padding: 0 1rem !important;
+  }
+  
+  .rules li {
+    font-size: 0.9rem !important;
+    margin: 0.5rem 0 !important;
+    padding-left: 2rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .rules li::before {
+    font-size: 1rem !important;
+  }
+  
+  /* Mobile Trailer */
+  .trailer {
+    margin-bottom: 2rem !important;
+    text-align: center !important;
+  }
+  
+  .trailer h2 {
+    font-size: 1.4rem !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .trailer video {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border: 2px solid gold !important;
+    border-radius: 8px !important;
+  }
+  
+  /* Mobile Section Headers */
+  .controls h2,
+  .characters h2,
+  .stages h2 {
+    font-size: 1.4rem !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Mobile Sections */
+  section {
+    margin-bottom: 2rem !important;
+  }
+  
+  .controls,
+  .characters,
+  .stages {
+    padding: 1rem !important;
+    margin: 0 !important;
+  }
+  
+  /* Mobile Controls */
+  #controls-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border: 2px solid gold !important;
+    border-radius: 8px !important;
+  }
+  
+  /* Mobile Character Grid */
+  .character-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+    margin-top: 1rem !important;
+    justify-content: center !important;
+    max-width: 100% !important;
+  }
+  
+  .character-card {
+    padding: 0.8rem 0.5rem !important;
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+  
+  .character-card img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .character-card span {
+    font-size: 0.9rem !important;
+  }
+  
+  /* Mobile Stages */
+  .stages-container {
+    padding: 0.5rem 0 !important;
+    gap: 0.8rem !important;
+    overflow-x: auto !important;
+  }
+  
+  .stages-image {
+    width: 250px !important;
+    height: 140px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  /* Other Websites Mobile */
   .websites-container {
-    padding: 0 50px;
+    padding: 0 30px !important;
   }
   
   .website-nav-btn {
-    width: 40px;
-    height: 40px;
+    width: 35px !important;
+    height: 35px !important;
   }
   
   .website-nav-prev {
-    left: 5px;
+    left: 5px !important;
   }
   
   .website-nav-next {
-    right: 5px;
+    right: 5px !important;
   }
   
   .websites-scroll {
-    margin: 0 -50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    margin: 0 -30px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
   
   .website-card {
-    flex: 0 0 calc(90vw - 2rem);
-    height: 350px;
+    flex: 0 0 calc(85vw - 2rem) !important;
+    height: 300px !important;
   }
   
   .website-image {
-    height: 150px;
+    height: 120px !important;
   }
   
   .website-content {
-    padding: 1rem;
+    padding: 0.8rem !important;
+  }
+  
+  .website-content h3 {
+    font-size: 1.1rem !important;
+  }
+  
+  .website-content p {
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra Small Mobile */
+  .cinema-header {
+    padding: 0.5rem 0.3rem !important;
+  }
+  
+  .cinema-header .logo {
+    font-size: 1rem !important;
+  }
+  
+  .cinema-header nav ul li a {
+    font-size: 0.8rem !important;
+    padding: 0.2rem 0.4rem !important;
+  }
+  
+  main {
+    padding: 0.5rem 0.3rem !important;
+  }
+  
+  .overview h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  .overview p {
+    font-size: 0.85rem !important;
+  }
+  
+  .trailer h2,
+  .controls h2,
+  .characters h2,
+  .stages h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .controls,
+  .characters,
+  .stages {
+    padding: 0.8rem !important;
+  }
+  
+  .character-card img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  
+  .character-card span {
+    font-size: 0.8rem !important;
+  }
+  
+  .stages-image {
+    width: 220px !important;
+    height: 124px !important;
+  }
+  
+  .rules li {
+    font-size: 0.8rem !important;
+    padding-left: 1.8rem !important;
+  }
+  
+  /* Footer Mobile */
+  footer {
+    padding: 0.8rem 0.5rem !important;
+    font-size: 0.8rem !important;
   }
 }
