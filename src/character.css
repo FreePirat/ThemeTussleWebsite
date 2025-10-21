@@ -201,6 +201,8 @@
 .character-playstyle-tag {
   position: absolute;
   bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
   display: inline-block;
   background: rgba(104, 88, 0, 0.85);
@@ -216,6 +218,7 @@
   vertical-align: middle;
   white-space: nowrap;
   pointer-events: none;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
@@ -275,7 +278,8 @@
     font-size: 0.98rem;
     padding: 0.25em 0.8em;
     bottom: 10px;
-    left: 2px;
+    left: 50%;
+    transform: translateX(-50%);
     top: auto;
   }
 }
