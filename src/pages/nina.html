@@ -49,18 +49,15 @@
             <a href="suzie.html" class="arrow-btn right-arrow" aria-label="Next Character">&#8594;</a>
         </div>
         <div class="character-movelist-bottom">
-            <!-- Movelist will be auto-generated here by JavaScript -->
         </div>
     </main>
     <footer>
         <p>&copy; 2025 Theme Tussle. All rights reserved. </p>
     </footer>
     <script>
-        // Debug: Check if the script loaded
         console.log('Nina page loaded');
         console.log('MovelistGenerator available:', typeof MovelistGenerator);
         
-        // Manual fallback initialization if auto-detection fails
         document.addEventListener('DOMContentLoaded', function() {
             console.log('DOM loaded, initializing movelist...');
             if (window.MovelistGenerator) {
