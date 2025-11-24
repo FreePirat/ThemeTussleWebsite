@@ -6,6 +6,8 @@
     <title>Charlie - Theme Tussle</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../character.css">
+    <link rel="stylesheet" href="../movelist.css">
+    <script src="../scripts/movelist-generator.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Roboto:400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../../favicon.png" />
 </head>
@@ -52,5 +54,16 @@
     <footer>
         <p>&copy; 2025 Theme Tussle. All rights reserved. </p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing movelist...');
+            if (window.MovelistGenerator) {
+                const generator = new window.MovelistGenerator();
+                generator.generateMovelist('charlie', '.character-movelist-bottom');
+            } else {
+                console.error('MovelistGenerator not found');
+            }
+    });
+    </script>
 </body>
 </html>
