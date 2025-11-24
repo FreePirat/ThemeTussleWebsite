@@ -39,6 +39,9 @@ class MovelistGenerator {
             `<span class="property ${this.propertyColors[prop] || prop}">${prop.replace('-', ' ')}</span>`
         ).join('');
 
+        // Use the character name for the image path
+        const character = this.characterName || 'Nina';
+
         return `
             <div class="move-entry">
                 <div class="move-header">
@@ -47,7 +50,7 @@ class MovelistGenerator {
                 </div>
                 <div class="move-content">
                     <div class="move-image">
-                        <img src="../../public/images/Nina${move.image}" alt="${move.name}" onerror="this.style.display='none'">
+                        <img src="../../public/images/${character}${move.image}" alt="${move.name}" onerror="this.style.display='none'">
                     </div>
                     <div class="move-data">
                         <div class="move-stats">
@@ -85,6 +88,7 @@ class MovelistGenerator {
         // Handle both old format (object with moves array) and new format (direct array)
         const moves = Array.isArray(moveData) ? moveData : moveData.moves;
         const characterName = Array.isArray(moveData) ? character : moveData.characterName;
+        this.characterName = characterName;
         
         // Generate HTML for all moves
         const moveListHTML = moves.map(move => this.generateMoveHTML(move)).join('');
