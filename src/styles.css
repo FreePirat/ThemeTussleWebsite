@@ -102,6 +102,22 @@ section {
 }
 
 /* Overview */
+.overview-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.overview-text {
+  flex: 1;
+  max-width: 800px;
+}
+
+.overview-badge {
+  flex-shrink: 0;
+}
+
 .overview h1 {
   font-family: 'Cinzel', serif;
   font-size: 3rem;
@@ -114,7 +130,6 @@ section {
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
   color: #ddd;
-  max-width: 800px;
 }
 
 .rules {
@@ -533,6 +548,20 @@ footer {
   }
   
   /* Mobile Overview */
+  .overview-content {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+  }
+  
+  .overview-text {
+    max-width: 100% !important;
+  }
+  
+  .overview-badge {
+    order: -1 !important;
+  }
+  
   .overview h1 {
     font-size: 1.8rem !important;
     text-align: center !important;
