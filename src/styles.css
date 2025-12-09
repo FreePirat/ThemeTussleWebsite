@@ -9,14 +9,12 @@
   --shadow: 0 10px 30px rgba(0, 0, 0, .35); /* Shadow */
 }
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fonts & body */
 body {
   font-family: 'Roboto', sans-serif;
   background: #0a0a0a;
@@ -27,7 +25,6 @@ body {
   min-height: 100vh;
 }
 
-/* Header */
 .cinema-header {
   background: repeating-linear-gradient(45deg, #b71c1c 0 24px, #7b1818 24px 48px);
   padding: 1rem 2rem;
