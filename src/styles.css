@@ -349,7 +349,7 @@ footer {
   height: 50px;
   border-radius: 50%;
   border: none;
-  background: var(--panel); /* adjust to your color scheme */
+  background: var(--panel);
   color: var(--text);
   cursor: pointer;
   display: flex;
@@ -361,7 +361,7 @@ footer {
 }
 
 .website-nav-btn:hover {
-  background: var(--brand); /* your brand color */
+  background: var(--brand); 
   color: var(--bg);
   transform: translateY(-50%) scale(1.1);
 }
@@ -500,291 +500,286 @@ footer {
   color: var(--bg);
 }
 
-/* Responsive Design - Mobile First */
 @media (max-width: 768px) {
-  /* Mobile test - red background to verify mobile styles are working */
-  body {
-    background: #0a0a0a !important;
-  }
   
   /* Force mobile layout */
   * {
-    box-sizing: border-box !important;
+    box-sizing: border-box;
   }
   
   /* Mobile Header */
   .cinema-header {
-    padding: 0.8rem 0.5rem !important;
+    padding: 0.8rem 0.5rem;
   }
   
   .cinema-header .navbar {
-    flex-direction: column !important;
+    flex-direction: column;
     gap: 0.8rem !important;
   }
   
   .cinema-header .logo {
-    font-size: 1.2rem !important;
-    text-align: center !important;
+    font-size: 1.2rem;
+    text-align: center;
   }
   
   .cinema-header nav ul {
-    gap: 0.6rem !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
+    gap: 0.6rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   
   .cinema-header nav ul li a {
-    font-size: 0.9rem !important;
-    padding: 0.3rem 0.6rem !important;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
   }
   
   /* Mobile Main Content */
   main {
-    padding: 0.8rem 0.5rem !important;
-    max-width: 100vw !important;
+    padding: 0.8rem 0.5rem;
+    max-width: 100vw;
   }
   
   /* Mobile Overview */
   .overview-content {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 1.5rem !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
   }
   
   .overview-text {
-    max-width: 100% !important;
+    max-width: 100%;
   }
   
   .overview-badge {
-    order: -1 !important;
+    order: -1;
   }
   
   .overview h1 {
-    font-size: 1.8rem !important;
-    text-align: center !important;
-    margin-bottom: 1rem !important;
-    line-height: 1.2 !important;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.2;
   }
   
   .overview p {
-    font-size: 0.95rem !important;
-    text-align: center !important;
-    margin-bottom: 1rem !important;
-    line-height: 1.4 !important;
-    max-width: 100% !important;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    max-width: 100%;
   }
   
   .rules {
-    margin-top: 1rem !important;
-    padding: 0 1rem !important;
+    margin-top: 1rem;
+    padding: 0 1rem;
   }
   
   .rules li {
-    font-size: 0.9rem !important;
-    margin: 0.5rem 0 !important;
-    padding-left: 2rem !important;
-    line-height: 1.3 !important;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    padding-left: 2rem;
+    line-height: 1.3;
   }
   
   .rules li::before {
-    font-size: 1rem !important;
+    font-size: 1rem;
   }
   
   /* Mobile Trailer */
   .trailer {
-    margin-bottom: 2rem !important;
-    text-align: center !important;
+    margin-bottom: 2rem;
+    text-align: center;
   }
   
   .trailer h2 {
-    font-size: 1.4rem !important;
-    text-align: center !important;
-    margin-bottom: 1rem !important;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
   }
   
   .trailer video {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    border: 2px solid gold !important;
-    border-radius: 8px !important;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid gold;
+    border-radius: 8px;
   }
   
   /* Mobile Section Headers */
   .controls h2,
   .characters h2,
   .stages h2 {
-    font-size: 1.4rem !important;
-    text-align: center !important;
-    margin-bottom: 1rem !important;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
   }
   
   /* Mobile Sections */
   section {
-    margin-bottom: 2rem !important;
+    margin-bottom: 2rem;
   }
   
   .controls,
   .characters,
   .stages {
-    padding: 1rem !important;
-    margin: 0 !important;
+    padding: 1rem;
+    margin: 0;
   }
   
   /* Mobile Controls */
   #controls-image {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    border: 2px solid gold !important;
-    border-radius: 8px !important;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid gold;
+    border-radius: 8px;
   }
   
   /* Mobile Character Grid */
   .character-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 1rem !important;
-    margin-top: 1rem !important;
-    justify-content: center !important;
-    max-width: 100% !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+    max-width: 100%;
   }
   
   .character-card {
-    padding: 0.8rem 0.5rem !important;
-    min-width: 0 !important;
-    width: 100% !important;
+    padding: 0.8rem 0.5rem;
+    min-width: 0;
+    width: 100%;
   }
   
   .character-card img {
-    width: 80px !important;
-    height: 80px !important;
+    width: 80px;
+    height: 80px;
   }
   
   .character-card span {
-    font-size: 0.9rem !important;
+    font-size: 0.9rem;
   }
   
   /* Mobile Stages */
   .stages-container {
-    padding: 0.5rem 0 !important;
-    gap: 0.8rem !important;
-    overflow-x: auto !important;
+    padding: 0.5rem 0;
+    gap: 0.8rem;
+    overflow-x: auto;
   }
   
   .stages-image {
-    width: 250px !important;
-    height: 140px !important;
-    flex-shrink: 0 !important;
+    width: 250px;
+    height: 140px;
+    flex-shrink: 0;
   }
   
   /* Other Websites Mobile */
   .websites-container {
-    padding: 0 30px !important;
+    padding: 0 30px;
   }
   
   .website-nav-btn {
-    width: 35px !important;
-    height: 35px !important;
+    width: 35px;
+    height: 35px;
   }
   
   .website-nav-prev {
-    left: 5px !important;
+    left: 5px;
   }
   
   .website-nav-next {
-    right: 5px !important;
+    right: 5px;
   }
   
   .websites-scroll {
-    margin: 0 -30px !important;
-    padding-left: 30px !important;
-    padding-right: 30px !important;
+    margin: 0 -30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   
   .website-card {
-    flex: 0 0 calc(85vw - 2rem) !important;
-    height: 300px !important;
+    flex: 0 0 calc(85vw - 2rem);
+    height: 300px;
   }
   
   .website-image {
-    height: 120px !important;
+    height: 120px;
   }
   
   .website-content {
-    padding: 0.8rem !important;
+    padding: 0.8rem;
   }
   
   .website-content h3 {
-    font-size: 1.1rem !important;
+    font-size: 1.1rem;
   }
   
   .website-content p {
-    font-size: 0.85rem !important;
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
   /* Extra Small Mobile */
   .cinema-header {
-    padding: 0.5rem 0.3rem !important;
+    padding: 0.5rem 0.3rem;
   }
   
   .cinema-header .logo {
-    font-size: 1rem !important;
+    font-size: 1rem;
   }
   
   .cinema-header nav ul li a {
-    font-size: 0.8rem !important;
-    padding: 0.2rem 0.4rem !important;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
   }
   
   main {
-    padding: 0.5rem 0.3rem !important;
+    padding: 0.5rem 0.3rem;
   }
   
   .overview h1 {
-    font-size: 1.5rem !important;
+    font-size: 1.5rem;
   }
   
   .overview p {
-    font-size: 0.85rem !important;
+    font-size: 0.85rem;
   }
   
   .trailer h2,
   .controls h2,
   .characters h2,
   .stages h2 {
-    font-size: 1.2rem !important;
+    font-size: 1.2rem;
   }
   
   .controls,
   .characters,
   .stages {
-    padding: 0.8rem !important;
+    padding: 0.8rem;
   }
   
   .character-card img {
-    width: 70px !important;
-    height: 70px !important;
+    width: 70px;
+    height: 70px;
   }
   
   .character-card span {
-    font-size: 0.8rem !important;
+    font-size: 0.8rem;
   }
   
   .stages-image {
-    width: 220px !important;
-    height: 124px !important;
+    width: 220px;
+    height: 124px;
   }
   
   .rules li {
-    font-size: 0.8rem !important;
-    padding-left: 1.8rem !important;
+    font-size: 0.8rem;
+    padding-left: 1.8rem;
   }
   
   /* Footer Mobile */
   footer {
-    padding: 0.8rem 0.5rem !important;
-    font-size: 0.8rem !important;
+    padding: 0.8rem 0.5rem;
+    font-size: 0.8rem;
   }
 }
