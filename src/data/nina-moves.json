@@ -42,7 +42,7 @@
     "damage": 18,
     "startup": 5,
     "active": 4,
-    "recovery": 9,
+    "recovery": 8,
     "onBlock": "-2",
     "properties": ["Low"],
     "image": "2L.png"
